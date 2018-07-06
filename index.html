@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<!-- Website Title & Description for Search Engine purposes -->
+	<title>India Tourism</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>var TxtType = function (el, toRotate, period) {
+			this.toRotate = toRotate;
+			this.el = el;
+			this.loopNum = 0;
+			this.period = parseInt(period, 10) || 2000;
+			this.txt = '';
+			this.tick();
+			this.isDeleting = false;
+		};
+
+		TxtType.prototype.tick = function () {
+			var i = this.loopNum % this.toRotate.length;
+			var fullTxt = this.toRotate[i];
+
+			if (this.isDeleting) {
+				this.txt = fullTxt.substring(0, this.txt.length - 1);
+			} else {
+				this.txt = fullTxt.substring(0, this.txt.length + 1);
+			}
+
+			this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+			var that = this;
+			var delta = 200 - Math.random() * 100;
+
+			if (this.isDeleting) { delta /= 2; }
+
+			if (!this.isDeleting && this.txt === fullTxt) {
+				delta = this.period;
+				this.isDeleting = true;
+			} else if (this.isDeleting && this.txt === '') {
+				this.isDeleting = false;
+				this.loopNum++;
+				delta = 500;
+			}
+
+			setTimeout(function () {
+				that.tick();
+			}, delta);
+		};
+
+		window.onload = function () {
+			var elements = document.getElementsByClassName('typewrite');
+			for (var i = 0; i < elements.length; i++) {
+				var toRotate = elements[i].getAttribute('data-type');
+				var period = elements[i].getAttribute('data-period');
+				if (toRotate) {
+					new TxtType(elements[i], JSON.parse(toRotate), period);
+				}
+			}
+			// INJECT CSS
+			var css = document.createElement("style");
+			css.type = "text/css";
+			css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+			document.body.appendChild(css);
+		};
+	</script>
+	<link rel="stylesheet" href="/css/style2.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<a href="#" class="navbar-brand">India</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="/page2.html">Discover</a>
+							</li>
+							<li>
+								<a href="#">Plan your Trip</a>
+							</li>
+							<li>
+								<a href="#">Events</a>
+							</li>
+							<li>
+								<a href="#">Places to Stay</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="myCarousel" data-interval="3000" data-ride="carousel" class="carousel slide">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="/images/t3_1280x650.jpg" alt="" class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="/images/s6.jpg" alt="" class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="/images/t4_1280x650.jpg" alt="" class="img-responsive">
+			</div>
+			<div class="item">
+				<img src="/images/t5_1280x650.jpg" alt="" class="img-responsive">
+			</div>
+
+
+		</div>
+		<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+			<span class="icon-prev"></span>
+		</a>
+		<a class="carousel-control right" href="#myCarousel" data-slide="next">
+			<span class="icon-next"></span>
+		</a>
+	</div>
+
+	<div class="container2">
+		<h1>
+			<a href="" class="typewrite" data-period="2000" data-type='[ "India.", "Incredible India!" ]'>
+				<span class="wrap"></span>
+			</a>
+		</h1>
+	</div>
+
+	<div class="container">
+		<h1>India</h1>
+		<p>A kaleidoscope of traditions, culture and vibrant geographies, India speaks for itself as a soul-stirring journey. From
+			its dusty snow trenches, frolic coasts, gripping natural green to the mystic ravines of spirituality and clusters of cultural
+			shades defining the raw beauty, India captures the heart of every tourist. Discover the different facets of this multicolored
+			country as it shapes your vision at every of its fold. With the country's tourism branched into several forms, India has
+			a chunk for every kind of a traveler. To get things going, here is a India travel planner which incorporates must visit
+			tourist attractions, places to visit in India, how to reach and the best time to visit.</p>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="hvrbox">
+					<img src="/images/s5.jpg" alt="Mountains" class="hvrbox-layer_bottom img-responsive">
+					<div class="hvrbox-layer_top">
+						<div class="hvrbox-text">Goa</div>
+					</div>
+				</div>
+				Goa is everything leisurely tropical holidays are made of. Snuggled in between lush Western Ghats and azure waters of the
+				Arabian Sea, Goa is languid. Goa holiday packages offers you a chance to explore and experience the best of this place.
+			</div>
+			<div class="col-sm-6">
+				<div class="hvrbox">
+					<img src="/images/s7.jpg" alt="Mountains" class="hvrbox-layer_bottom img-responsive">
+					<div class="hvrbox-layer_top">
+						<div class="hvrbox-text">Rajasthan</div>
+					</div>
+				</div>
+				Rajasthan is a classic blend of beauty and historicity. Indeed, the State has so much going for it that it's difficult to
+				decide where to start. The very images that it conjures up are steeped in romance and beauty.
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1></h1>
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="hvrbox">
+					<img src="/images/s8.jpg" alt="Mountains" class="hvrbox-layer_bottom img-responsive">
+					<div class="hvrbox-layer_top">
+						<div class="hvrbox-text">Shimla</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4" style=" margin-top: 70px;">
+				Shimla is a perfect heaven for the ones in search of tranquility. Nature has blessed this capital city with innumerable gifts
+				and man has used them to make Shimla one of India's best locales.
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h1></h1>
+		<div class="row">
+			<div class="col-sm-4" style=" margin-top: 40px;">
+				If there is one place in the riveting diversity of India where there is tangible beauty and a phenomenal thing like total
+				literacy, it is in Kerala. Kerala is a state full of good things. This small state at the southern tip of the Indian
+				peninsula is an easy winner owing to its beautiful landscape, intriguing customs, high-intensity cultural life and an
+				educated public so often dressed in white.
+			</div>
+			<div class="col-sm-8">
+				<div class="hvrbox">
+					<img src="/images/s9.jpg" alt="Mountains" class="hvrbox-layer_bottom img-responsive">
+					<div class="hvrbox-layer_top">
+						<div class="hvrbox-text">Kerala</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+</body>
+
+
+<div class="footer footer_final">
+	<footer>
+		<div id="foot">
+			<div id=insights>
+				Our monthly letter with exclusive insights
+			</div>
+			<div id="emailid">
+				Email Address
+			</div>
+			<div id="newsletter">
+				This form is used to sign you up to our newsletter under the legal basis of consent. It is managed using
+				<br>Constant Contact, and will be retained until you choose to unsubscribe.
+			</div>
+			<div id="list2">
+				<ul>
+					<li>
+						<a href="#">Privacy Policy</a>
+					</li>
+					<li>
+						<a href="#">Terms</a>
+					</li>
+					<li>
+						<a href="#">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div id="logos">
+				<i class="fab fa-facebook-f"></i>
+			</div>
+
+		</div>
+	</footer>
+</div>
+
+
+
+
+</body>
+
+</html>

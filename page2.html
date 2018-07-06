@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <!-- Website Title & Description for Search Engine purposes -->
+    <title>India Tourism</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+    </script>
+    <link rel="stylesheet" href="/css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">India</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Discover</a>
+                            </li>
+                            <li>
+                                <a href="#">Plan your Trip</a>
+                            </li>
+                            <li>
+                                <a href="#">Events</a>
+                            </li>
+                            <li>
+                                <a href="#">Places to Stay</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div style=" height:500px;background-color: black; width: 100%;">
+            <iframe class="youtube" height="450" width="100%" src="https://www.youtube.com/embed/kFPTkmQX7JA?&mute=1&autoplay=1&controls=0&loop=1"
+                frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Best Time To Visit India</h1>
+        <p>Owing to its geographical diversity, India could be visited throughout the year. Whereas winter months from October
+            till March are the peak season for tourism in India, monsoon is the best time to visit for enjoying the rain
+            in Northern India as well as the hills or plains in the South for Ayurveda therapies. For wildlife adventure,April,May
+            and June months are the best time to visit National Parks in India as it is the time when chances for sighting
+            Bengal tigers are best.</p>
+        <p>Winter months are perfect too for wildlife spotting. Summer months from April till July is best to for hiking, treks
+            and adventure in North and North Eastern Region of India as well as visit to Ladakh. With our compilation on
+            best time to visit in India according to season, know where to plan your holiday and best things to do in that
+            season if you are planning your tour to India.</p>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div class="item">
+                    <img src="/images/s10.png" alt="" class="img-responsive imgcentre">
+                </div>
+                <p>Summer (March-May)</p>
+                Summer in India is ideal for yoga, meditation as well as adventure sports in North India. This is also the time when honeymoon
+                in North India and North East is in demand. Northern plains and South India are hot and humid with temperature
+                exceeding 40 degrees Celsius. Hill stations and beach destinations are ideal for this time. Ladakh, Kashmir,
+                Ooty, Manali, Spiti Valley, Darjeeling, Rishikesh, Munnar, Auli, Goa, Andaman and Nicobar Islands along with
+                pilgrim destinations like Chota Chardham of Uttarakhand are some of the destinations that are worth-visiting
+                in India in summer season.
+            </div>
+            <div class="col-sm-4">
+                <div class="item">
+                    <img src="/images/s11.png" alt="" class="img-responsive imgcentre">
+                </div>
+                <p>Monsoon (June-October)</p>
+                Monsoon arrives in South India in early July and covers entire country by the end of July. At this time high-altitude regions
+                can be avoided because of chances of landslides. Rains bring down the high temperatures, offering respite
+                from heat. Monsoon happens to be the best time for Ayurveda in Kerala, increasing its lush greenery to manifolds.
+                Cherrapunji, Agra, Delhi, Rajasthan, Lonavala, Darjeeling, Kodaikanal, Goa, Coorg, Orchha, Kutch are some
+                of the other destinations that can be explored at the time of rains. Periyar National Park in Thekkady, Kerala
+                is one of the best places to visit in monsoon for boat safaris.
+            </div>
+            <div class="col-sm-4">
+                <div class="item">
+                    <img src="/images/s12.png" alt="" class="img-responsive imgcentre">
+                </div>
+                <p>Winter (November-February)</p>
+                This is the peak season for tourism in India. Favorable weather and temperature makes it ideal for sightseeing, city breaks
+                and other outdoor activities. This is the best time to explore wonderful places like Rajasthan, Goa, Delhi,
+                Agra, Kerala, Andaman and Nicobar Islands, Lakshadweep, Maharashtra and other parts of North India, where
+                temperatures vary from 0 to 25 degrees. However, if you are fond of snow, ideal destinations for you would
+                be destinations of North-east India, and North Indian hills including Himachal Pradesh, Kashmir, and Uttarakhand.
+                Ladakh is perfect for trekking lovers during the winter months.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>India Tour Packages</h1>
+        <p>India is one of world's favored travel destinations. The country is blessed with diverse sceneries, cultures, rich
+            heritage, varied food and amazing experiences. Experience a merge of old and new, relaxation and adventure, or
+            anything you wish for. You can explore India with tour packages available in classifications of themes, duration,
+            destination and interest. </p>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="hvrbox">
+                    <img src="/images/s13.jpg" alt="Mountains" class="hvrbox-layer_bottom imgresize">
+                    <div class="hvrbox-layer_top">
+                        <div class="hvrbox-text"></div>
+                    </div>
+                </div>
+                <p>Wildlife</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="hvrbox">
+                    <img src="/images/s14.jpg" alt="Mountains" class="hvrbox-layer_bottom imgresize">
+                    <div class="hvrbox-layer_top">
+                        <div class="hvrbox-text"></div>
+                    </div>
+                </div>
+                <p>Hill-Station</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="hvrbox">
+                    <img src="/images/s16.jpg" alt="Mountains" class="hvrbox-layer_bottom imgresize">
+                    <div class="hvrbox-layer_top">
+                        <div class="hvrbox-text"></div>
+                    </div>
+                </div>
+                <p>Beaches</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="hvrbox">
+                    <img src="/images/s17.jpg" alt="Mountains" class="hvrbox-layer_bottom imgresize">
+                    <div class="hvrbox-layer_top">
+                        <div class="hvrbox-text"></div>
+                    </div>
+                </div>
+                <p>Adventure</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="hvrbox">
+                    <img src="/images/s18.jpg" alt="Mountains" class="hvrbox-layer_bottom imgresize">
+                    <div class="hvrbox-layer_top">
+                        <div class="hvrbox-text"></div>
+                    </div>
+                </div>
+                <p>Forts & Palaces</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="hvrbox">
+                    <img src="/images/s19.jpg" alt="Mountains" class="hvrbox-layer_bottom imgresize">
+                    <div class="hvrbox-layer_top">
+                        <div class="hvrbox-text"></div>
+                    </div>
+                </div>
+                <p>Winter</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer footer_final">
+        <footer>
+            <div id="foot">
+                <div id=insights>
+                    Our monthly letter with exclusive insights
+                </div>
+                <div id="emailid">
+                    Email Address
+                </div>
+                <div id="newsletter">
+                    This form is used to sign you up to our newsletter under the legal basis of consent. It is managed using
+                    <br>Constant Contact, and will be retained until you choose to unsubscribe.
+                </div>
+                <div id="list2">
+                    <ul>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="logos">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+
+            </div>
+        </footer>
+    </div>
